@@ -7,6 +7,7 @@ pipeline {
         echo 'building the application...'
         echo 'Application built'
         nodejs('Nodejs') {
+          sh 'cd app'
           sh 'npm install --modules-folder app'
         }
       }
