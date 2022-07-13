@@ -6,6 +6,9 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built'
+        nodejs('Nodejs') {
+          sh 'npm install --modules-folder app'
+        }
       }
     }
     stage("test") {
